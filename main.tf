@@ -67,7 +67,7 @@ module "kms" {
 ########################### add yaml Encrypter ###############################
 
 resource "github_repository_file" "sops-patch" {
-  # depends_on          = [module.flux_bootstrap]
+  depends_on          = [module.flux_bootstrap]
   repository          = var.FLUX_GITHUB_REPO
   branch              = "main"
   file                = "${var.FLUX_GITHUB_TARGET_PATH}/${var.FLUX_GITHUB_REPO}/sops-patch.yaml"
@@ -94,7 +94,7 @@ EOF
 }
 
 resource "github_repository_file" "sa-patch" {
-  # depends_on          = [module.flux_bootstrap]
+  depends_on          = [module.flux_bootstrap]
   repository          = var.FLUX_GITHUB_REPO
   branch              = "main"
   file                = "${var.FLUX_GITHUB_TARGET_PATH}/${var.FLUX_GITHUB_REPO}/sa-patch.yaml"
@@ -114,7 +114,7 @@ EOF
 }
 
 resource "github_repository_file" "kustomization" {
-  # depends_on          = [module.flux_bootstrap]
+  depends_on          = [module.flux_bootstrap]
   repository          = var.FLUX_GITHUB_REPO
   branch              = "main"
   file                = "${var.FLUX_GITHUB_TARGET_PATH}/${var.FLUX_GITHUB_REPO}/kustomization.yaml"
@@ -142,7 +142,7 @@ EOF
 ############################## add yaml app ##################################
 
 resource "github_repository_file" "ns" {
-  # depends_on          = [module.flux_bootstrap]
+  depends_on          = [module.flux_bootstrap]
   repository          = var.FLUX_GITHUB_REPO
   branch              = "main"
   file                = "${var.FLUX_GITHUB_TARGET_PATH}/${var.APP_GITHUB_FOLDER}/ns.yaml"
@@ -159,7 +159,7 @@ EOF
 }
 
 resource "github_repository_file" "tbot-gr" {
-  # depends_on          = [module.flux_bootstrap]
+  depends_on          = [module.flux_bootstrap]
   repository          = var.FLUX_GITHUB_REPO
   branch              = "main"
   file                = "${var.FLUX_GITHUB_TARGET_PATH}/${var.APP_GITHUB_FOLDER}/tbot-gr.yaml"
@@ -183,7 +183,7 @@ EOF
 }
 
 resource "github_repository_file" "tbot-hr" {
-  # depends_on = [module.flux_bootstrap]
+  depends_on = [module.flux_bootstrap]
   repository = var.FLUX_GITHUB_REPO
   branch     = "main"
   file       = "${var.FLUX_GITHUB_TARGET_PATH}/${var.APP_GITHUB_FOLDER}/tbot-hr.yaml"
