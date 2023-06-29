@@ -24,22 +24,22 @@ This repository showcases a deployment workflow a Kubernetes cluster using the S
 By utilizing Sealed Secrets, SOPS-KMS-FLUX, Terraform, and GitHub Actions, this repository provides a secure and automated approach to deploying Kubernetes clusters, managing secrets, and ensuring the confidentiality of sensitive data within a Git repository.
 
 ## Using
-
+Run the following command to deploy the infrastructure:
 ```bash
 terraform apply
 ```
 
-Create manually in automaticly created github repository folliwing secrets
+Manually create the following secrets in the automatically created GitHub repository:
 ```bash
 GOOGLE_PROJECT - GCP project name
 GCP_SA_KEY     - GCP service account json key
 TOKEN_SECRET   - if you want to use github secret for tocken
 ```
 
-Create manually in GCP service account with roles Cloud KMS CryptoKey Encrypter/Decrypter and Secret Manager Secret Accessor.
-Create json key and add it into GCP_SA_KEY
+Manually create a GCP service account with the roles "Cloud KMS CryptoKey Encrypter/Decrypter" and "Secret Manager Secret Accessor".
+Create a JSON key for the service account and add it to the GCP_SA_KEY secret.
 
-In github actions push: Run Workflow
+In GitHub Actions, push: run the workflow.
 
 ```bash
 gcloud container clusters get-credentials main --zone us-central1-c --project <GOOGLE_PROJECT>
