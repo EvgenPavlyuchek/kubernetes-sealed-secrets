@@ -47,7 +47,7 @@ Manually create the following secrets in the automatically created GitHub reposi
 ```bash
 GOOGLE_PROJECT - GCP project name
 GCP_SA_KEY     - GCP service account json key
-TOKEN_SECRET   - if you want to use github secret for tocken
+TOKEN_SECRET   - if you want to use github secret for token
 ```
 
 Manually create a GCP service account with the roles "Cloud KMS CryptoKey Encrypter/Decrypter" and "Secret Manager Secret Accessor".
