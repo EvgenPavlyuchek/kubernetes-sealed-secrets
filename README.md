@@ -4,22 +4,37 @@ This repository showcases a deployment workflow a Kubernetes cluster using the S
 
 ### Features:
 
-Sealed Secrets: The Sealed Secrets method is employed to encrypt sensitive data, ensuring secure storage and transmission of secrets within the Git repository.  
-SOPS-KMS-FLUX Integration: SOPS (Secrets OPerationS) is integrated with KMS (Key Management Service) and Flux to handle encryption, key management, and secret synchronization.  
-Terraform Deployment: The cluster infrastructure is deployed using Terraform, enabling consistent and reproducible deployments.  
-GitHub Actions: The repository leverages GitHub Actions to automate the deployment process and manage secrets securely.  
-Secret Management Options: The workflow provides two options for storing the application token secret: GitHub Secrets or GCP Secret Manager.  
-Secure Encryption with SOPS: SOPS is utilized to encrypt the YAML file containing the application token secret, ensuring that it remains confidential and protected.  
+1. ***Sealed Secrets:***  
+The Sealed Secrets method is employed to encrypt sensitive data, ensuring secure storage and transmission of secrets within the Git repository.  
+2. ***SOPS-KMS-FLUX Integration:***  
+SOPS (Secrets OPerationS) is integrated with KMS (Key Management Service) and Flux to handle encryption, key management, and secret synchronization.  
+3. ***Terraform Deployment:***  
+The cluster infrastructure is deployed using Terraform, enabling consistent and reproducible deployments.  
+4. ***GitHub Actions:***  
+The repository leverages GitHub Actions to automate the deployment process and manage secrets securely.  
+5. ***Secret Management Options:***  
+The workflow provides two options for storing the application token secret: GitHub Secrets or GCP Secret Manager.  
+6. ***Secure Encryption with SOPS:***  
+SOPS is utilized to encrypt the YAML file containing the application token secret, ensuring that it remains confidential and protected.  
 
 ### Workflow Overview:
 
-Infrastructure Deployment: Terraform provisions the necessary resources to create the Kubernetes cluster in the desired cloud environment (GCP).  
-SOPS-KMS-FLUX Integration: SOPS, KMS, and Flux are integrated to handle secret encryption, key management, and secret synchronization within the cluster.  
-GitHub Actions Automation: GitHub Actions automates the deployment workflow, including the creation of the application token secret YAML file.  
-Secret Encryption with SOPS: The application secret YAML file is encrypted using SOPS to protect its confidentiality.  
-Git Repository Update: The encrypted secret YAML file is added to the Git repository, ensuring secure storage of sensitive information.  
-Flux Deployment Sync: Flux continuously monitors the Git repository for changes and implements them in the production environment, ensuring consistent and secure deployments.  
-Protected Repository: The repository maintains the security of sensitive data, as all secrets are encrypted and protected within the repository.  
+1. ***Infrastructure Deployment:***  
+Terraform provisions the necessary resources to create the Kubernetes cluster in the desired cloud environment (GCP).  
+2. ***SOPS-KMS-FLUX Integration:***  
+SOPS, KMS, and Flux are integrated to handle secret encryption, key management, and secret synchronization within the cluster.  
+3. ***GitHub Actions Automation:***  
+GitHub Actions automates the deployment workflow, including the creation of the application token secret YAML file.  
+4. ***Secret Encryption with SOPS:***  
+The application secret YAML file is encrypted using SOPS to protect its confidentiality.  
+5. ***Git Repository Update:***  
+The encrypted secret YAML file is added to the Git repository, ensuring secure storage of sensitive information.  
+6. ***Flux Deployment Sync:***  
+Flux continuously monitors the Git repository for changes and implements them in the production environment, ensuring consistent and secure deployments.  
+7. ***Protected Repository:***  
+The repository maintains the security of sensitive data, as all secrets are encrypted and protected within the repository.  
+
+
 By utilizing Sealed Secrets, SOPS-KMS-FLUX, Terraform, and GitHub Actions, this repository provides a secure and automated approach to deploying Kubernetes clusters, managing secrets, and ensuring the confidentiality of sensitive data within a Git repository.
 
 ### Using
