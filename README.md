@@ -4,8 +4,8 @@ This repository showcases a deployment workflow a Kubernetes cluster using the S
 
 ### Features:
 
-Sealed Secrets: The Sealed Secrets method is employed to encrypt sensitive data, ensuring secure storage and transmission of secrets within the Git repository.
-SOPS-KMS-FLUX Integration: SOPS (Secrets OPerationS) is integrated with KMS (Key Management Service) and Flux to handle encryption, key management, and secret synchronization.
+Sealed Secrets: The Sealed Secrets method is employed to encrypt sensitive data, ensuring secure storage and transmission of secrets within the Git repository. 
+SOPS-KMS-FLUX Integration: SOPS (Secrets OPerationS) is integrated with KMS (Key Management Service) and Flux to handle encryption, key management, and secret synchronization. 
 Terraform Deployment: The cluster infrastructure is deployed using Terraform, enabling consistent and reproducible deployments.
 GitHub Actions: The repository leverages GitHub Actions to automate the deployment process and manage secrets securely.
 Secret Management Options: The workflow provides two options for storing the application token secret: GitHub Secrets or GCP Secret Manager.
